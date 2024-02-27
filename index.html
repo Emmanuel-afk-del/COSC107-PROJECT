@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="project css.css" />
+  </head>
+  <body style="background-color: #bcccdc">
+    <img
+      style="padding-left: 20px; padding-top: 70px"
+      src="iPhone-15-back-view.jpg"
+      alt="IPHONE"
+      
+      height="370px"
+      width="553px"
+    />
+    <div class="div1">
+      <h1 class="h1">OLD IPHONE GIVEAWAY</h1>
+      <h2 class="h2">
+        <b
+          >Giveaway Ends On Friday, 7 March 2024 At<br />
+          11:30am</b
+        >
+      </h2>
+      <br />
+      <p class="p1">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Reprehenderit<br />
+        molestiae cum libero atque ut voluptate qui consectetur aliquid
+        incidunt<br />
+        quos, dolore, non commodi quaerat aliquam eligendi,<br />
+        quisquam totam blanditiis.
+      </p>
+      <table class="t1">
+        <tr style="font-size: 17px">
+          <td id="Days"></td>
+          <td id="Hours"></td>
+          <td id="Mins"></td>
+          <td id="Secs"></td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      //This sets the target date
+      var countDownDate = new Date("Mar 7, 2024 11:30:00").getTime();
+      var x = setInterval(function () {
+        var now = new Date().getTime();
+        //This is to get the distance between the two dates
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        //This gets the element by the specified Id
+        document.getElementById("Days").innerHTML = days + "<br>" + "DAYS";
+        document.getElementById("Hours").innerHTML = hours + "<br>" + "HOURS";
+        document.getElementById("Mins").innerHTML = minutes + "<br>" + "MINS";
+        document.getElementById("Secs").innerHTML =
+          seconds + "<br>" + "SECONDS";
+
+        // If the count down is over, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("Days").innerHTML = "EXPIRED";
+          document.getElementById("Hours").innerHTML = "EXPIRED";
+          document.getElementById("Mins").innerHTML = "EXPIRED";
+          document.getElementById("Secs").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

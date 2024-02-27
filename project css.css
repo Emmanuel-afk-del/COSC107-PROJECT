@@ -1,0 +1,42 @@
+.div1 {
+  float: right;
+  display: block;
+  padding-top: 70px;
+  padding-left: 10px;
+  padding-right: 50px;
+}
+.h2 {
+  font-size: 0.875rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.25rem;
+  line-height: 1.25;
+  text-transform: capitalize;
+  margin-bottom: 0.75rem;
+}
+.h1 {
+  color: #0b64a4;
+  font: size 1.25em;
+  font-family: sans-serif;
+}
+.p1 {
+  color: grey;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+td {
+  border: 1px solid;
+  width: 5rem;
+  height: 5rem;
+  align-items: center;
+  justify-items: center;
+  background-color: #063251;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 15px;
+  padding-right: 5px;
+}
