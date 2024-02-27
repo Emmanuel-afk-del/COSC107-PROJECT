@@ -11,7 +11,6 @@
       style="padding-left: 20px; padding-top: 70px"
       src="iPhone-15-back-view.jpg"
       alt="IPHONE"
-      
       height="370px"
       width="553px"
     />
@@ -56,6 +55,13 @@
         );
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        //adds zero in front of the time
+        days = days < 10 ? "0" + days : days;
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
         //This gets the element by the specified Id
         document.getElementById("Days").innerHTML = days + "<br>" + "DAYS";
         document.getElementById("Hours").innerHTML = hours + "<br>" + "HOURS";
@@ -66,10 +72,6 @@
         // If the count down is over, write some text
         if (distance < 0) {
           clearInterval(x);
-          document.getElementById("Days").innerHTML = "EXPIRED";
-          document.getElementById("Hours").innerHTML = "EXPIRED";
-          document.getElementById("Mins").innerHTML = "EXPIRED";
-          document.getElementById("Secs").innerHTML = "EXPIRED";
         }
       }, 1000);
     </script>
